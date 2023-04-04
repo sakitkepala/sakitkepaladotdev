@@ -1,0 +1,17 @@
+{
+  "name": "sakitkepaladotdev",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^2.1.9"
+  }
+}
