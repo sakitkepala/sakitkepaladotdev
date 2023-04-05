@@ -1,0 +1,83 @@
+---
+import PrimaryLayout from "../layouts/PrimaryLayout.astro";
+---
+
+<PrimaryLayout
+  title="Tulisan-tulisan dari Dika - sakitkepala.dev"
+  description="Tulisan-tulisan dari Dika"
+>
+  <div class="content-layout">
+    <main class="content">
+      <h1>Tulisan</h1>
+
+      <p>
+        Misal penasaran, saya sedang mempersiapkan beberapa tulisan blog untuk dipublikasikan di
+        sini nanti. Sementara untuk sekarang belum available. Tunggu yah.
+      </p>
+
+      <p>Thanks.</p>
+
+      <!-- TODO: implemen postingan blog ("tulisan") pake ini -->
+      <!-- <div class="post-list">
+        <article class="post">
+          <h2 class="title">Artikel GraphQL Client</h2>
+          <p class="excerpt">
+            Excerpt copywriting. Rada panjang, jadi keliatan lebih nyata kalau nanti diterapin di
+            teks yang beneran.
+          </p>
+        </article>
+
+        <article class="post">
+          <h2 class="title">
+            Artikel Unit Testing, Artikel GraphQL, Artikel React, Digabung Jadi Satu. Panjang Deh
+            Ya.
+          </h2>
+        </article>
+
+        <article class="post">
+          <h2 class="title">Artikel Case Study My Archery</h2>
+          <p class="excerpt">Excerpt copywriting.</p>
+        </article>
+      </div> -->
+    </main>
+  </div>
+</PrimaryLayout>
+
+<style>
+  .content-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, var(--content-container-width)) minmax(0, 1fr);
+    margin-top: 20rem;
+    margin-bottom: 10rem;
+  }
+
+  .content-layout > *:nth-child(1) {
+    grid-column: 2;
+    grid-row: 1;
+    max-width: 600px;
+  }
+
+  .content > p + p {
+    margin-top: 0.675em;
+  }
+
+  .content > h1 {
+    font-weight: 400;
+    font-size: 2.75rem;
+    margin-bottom: 2.75rem;
+  }
+
+  .post-list .post + .post {
+    margin-top: 2rem;
+  }
+
+  .post .title {
+    font-weight: 400;
+    font-size: 1.75rem;
+    margin-bottom: 0.25em;
+  }
+
+  .post .excerpt {
+    font-size: 1.125rem;
+  }
+</style>

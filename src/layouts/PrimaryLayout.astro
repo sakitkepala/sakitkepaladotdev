@@ -1,0 +1,92 @@
+---
+import NavLinks from "../components/NavLinks.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+type Props = {
+  title: string;
+  description?: string;
+};
+
+const { title, description } = Astro.props;
+---
+
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    {Boolean(description) && <meta name="description" content={description} />}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="layout-grid">
+      <header class="header">
+        <div class="logo">sakitkepala.dev</div>
+        <div>
+          <NavLinks />
+        </div>
+      </header>
+
+      <slot />
+
+      <Footer />
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    background-color: #ffffff;
+    font-size: 1.3125rem;
+    font-family: "Almarai", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+
+  html,
+  body,
+  .layout-grid {
+    height: 100%;
+  }
+
+  :root {
+    --content-container-width: 720px;
+  }
+
+  .layout-grid {
+    display: grid;
+    grid-template-rows: auto minmax(max-content, 1fr) auto;
+    overflow-x: hidden;
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, var(--content-container-width)) minmax(0, 1fr);
+  }
+
+  .header > *:nth-child(1) {
+    grid-column: 2;
+    grid-row: 1;
+    max-width: var(--content-container-width);
+  }
+
+  .header > *:nth-child(2) {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .logo {
+    margin-block: 1rem;
+    font-size: 2.5rem;
+  }
+</style>

@@ -1,6 +1,5 @@
 ---
 import NavLinks from "../components/NavLinks.astro";
-import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 ---
 
@@ -11,10 +10,10 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
 
-    <title>Selamat datang di web site milik Dika - sakitkepala.dev</title>
+    <title>Wuuups! Nyasar kayanya deh... Error 404</title>
     <meta
       name="description"
-      content="Halaman beranda sakitkepala.dev, web site personal milik Andika Priyotama"
+      content="Halaman yang dituju tidak ditemukan. Silakan kembali ke halaman depan atau klik menu navigasi yang tersedia."
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,20 +28,28 @@ import "../styles/global.css";
       <div><NavLinks /></div>
 
       <header class="sakitkepala-heading">
-        <div class="sakitkepala-heading-text">sakitkepala.dev</div>
+        <div class="sakitkepala-heading-text">Kosong... (404)</div>
       </header>
 
       <main class="content">
         <p>
-          Hai. Web site saya ini baru <i>under construction</i> nih. Desainnya memang masih belum saya
-          tentukan, tapi kontennya sudah ada, sih. Lihat-lihat dulu aja boleh. Terima kasih sudah mampir,
-          yah.
+          Gak ada apa-apa di sini... nyasar kayanya deh. Coba ke halaman <a
+            href="/"
+            title="Balik ke halaman depan">depan</a
+          >
+          atau bisa klik link navigasi di atas aja.
         </p>
       </main>
 
-      <div class="footer-wrapper">
-        <Footer />
-      </div>
+      <footer class="footer">
+        <a href="/" title="Alamat web sakitkepala.dev">https://sakitkepala.dev</a>. Web site
+        eksperimental oleh <a
+          href="https://github.com/sakitkepala/sakitkepaladotdev"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Repositori sakitkepaladotdev di Github">Andika Priyotama</a
+        >.
+      </footer>
     </div>
   </body>
 </html>
@@ -85,6 +92,49 @@ import "../styles/global.css";
     grid-row: 1;
     grid-column: 1 / var(--grid-end);
     justify-self: end;
+  }
+
+  .navigation-menu {
+    grid-row: 1;
+    grid-column: 1 / var(--grid-end);
+    justify-self: end;
+
+    margin: 1.5rem 2rem;
+
+    display: flex;
+    column-gap: 1rem;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    font-size: 2rem;
+  }
+
+  @media screen and (min-width: 425px) {
+    .navigation-menu {
+      margin-inline: 1rem;
+      align-items: baseline;
+      font-size: 28px;
+    }
+  }
+
+  @media screen and (min-width: 512px) {
+    .navigation-menu {
+      margin-block: 1rem;
+    }
+  }
+
+  a,
+  a:visited {
+    color: rgb(0, 0, 238);
+  }
+
+  a:hover,
+  a.current-page {
+    color: rgb(85, 26, 139);
+  }
+
+  a:active {
+    color: rgb(238, 0, 0);
   }
 
   .sakitkepala-heading {
@@ -131,8 +181,17 @@ import "../styles/global.css";
     }
   }
 
-  .footer-wrapper {
+  .footer {
     grid-row: 4;
     grid-column: 1 / var(--grid-end);
+
+    margin: 1.625rem 2rem;
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .footer {
+      margin: 1rem;
+    }
   }
 </style>
