@@ -7,11 +7,67 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
   description="Karya-karya buatan Dika"
 >
   <div class="content-layout">
-    <main class="content">
+    <main class="article-content">
       <h1>Karya</h1>
-      <p>Beberapa projek yang pernah saya kerjakan dan yang sedang saya kerjakan juga.</p>
+      <p>
+        Projek-projek yang pernah saya kerjakan, atau yang lagi saya kerjakan juga. Ini beberapa
+        yang saya suka.
+      </p>
 
-      <p>...</p>
+      <div class="work-item-list">
+        <div class="work-item">
+          <h2 class="title">My Archery</h2>
+          <div class="thumbnail">
+            <img
+              class="image"
+              src="/public/karya-myarchery.png"
+              alt="Screenshot karya projek My Archery"
+            />
+          </div>
+          <div class="actions">
+            <s>sumber</s> / <a href="https://myarchery.id" target="_blank" rel="noopener noreferrer"
+              >kunjungi</a
+            >
+          </div>
+          {
+            /* <div class="description">
+            <p>
+              Deskripsinya ini aplikasi buat itu. Soalnya gini. Jadi gitu sih ya kira-kira ngerti
+              kan ya.
+            </p>
+          </div> */
+          }
+        </div>
+
+        <div class="work-item">
+          <h2 class="title">App <i>iniresume.</i> ✨</h2>
+          <div class="thumbnail">
+            <img
+              class="image"
+              src="/public/karya-iniresume.png"
+              alt="Screenshot karya projek iniresume."
+            />
+          </div>
+          <div class="actions">
+            <a
+              href="https://github.com/sakitkepala/iniresume"
+              target="_blank"
+              rel="noopener noreferrer">sumber</a
+            > /
+            <a href="https://iniresume.sakitkepala.dev" target="_blank" rel="noopener noreferrer"
+              >kunjungi</a
+            >
+          </div>
+          {
+            /* <div class="description">
+            <p>
+              Deskripsinya ini aplikasi buat itu. Soalnya gini. Jadi gitu sih ya kira-kira ngerti
+              kan ya.
+            </p>
+          </div> */
+          }
+        </div>
+      </div>
     </main>
   </div>
 </PrimaryLayout>
@@ -21,7 +77,7 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, var(--content-container-width)) minmax(0, 1fr);
     margin-top: 20rem;
-    margin-bottom: 10rem;
+    margin-bottom: 16rem;
   }
 
   .content-layout > *:nth-child(1) {
@@ -30,13 +86,37 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
     max-width: 600px;
   }
 
-  .content > p + p {
-    margin-top: 0.675em;
+  .work-item-list {
+    margin-top: 6rem;
   }
 
-  .content > h1 {
+  .work-item-list > .work-item + .work-item {
+    margin-top: 6rem;
+  }
+
+  .work-item .title {
+    margin-inline: -5rem;
+    font-size: 5rem;
     font-weight: 400;
-    font-size: 2.75rem;
-    margin-bottom: 2.75rem;
+    text-align: center;
+    margin-bottom: 0.375em;
+  }
+
+  .work-item .thumbnail {
+    border: 1px solid rgb(220, 220, 230);
+  }
+
+  .work-item .image {
+    max-width: 100%;
+  }
+
+  .work-item-list .actions {
+    margin-top: 0.875em;
+    line-height: 1.5em;
+    text-align: center;
+  }
+
+  .work-item-list .description {
+    margin-top: 0.875em;
   }
 </style>

@@ -7,24 +7,24 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
   description="Tulisan-tulisan dari Dika"
 >
   <div class="content-layout">
-    <main class="content">
+    <main class="article-content">
       <h1>Tulisan</h1>
 
-      <p>
-        Misal penasaran, saya sedang mempersiapkan beberapa tulisan blog untuk dipublikasikan di
-        sini nanti. Sementara untuk sekarang belum available. Tunggu yah.
-      </p>
+      {/* TODO: hapus intro ini, cuma placeholder buat pas entri masih kosong */}
+      <div class="post-list-intro">
+        <p>
+          Misal penasaran, saya sedang mempersiapkan beberapa tulisan blog untuk dipublikasikan di
+          sini nanti. Sementara untuk sekarang belum available. Tunggu yah.
+        </p>
 
-      <p>Thanks.</p>
+        <p>Thanks.</p>
+      </div>
 
-      <!-- TODO: implemen postingan blog ("tulisan") pake ini -->
-      <!-- <div class="post-list">
+      {/* TODO: implemen postingan blog ("tulisan") pake ini */}
+      {
+        /* <div class="post-list">
         <article class="post">
           <h2 class="title">Artikel GraphQL Client</h2>
-          <p class="excerpt">
-            Excerpt copywriting. Rada panjang, jadi keliatan lebih nyata kalau nanti diterapin di
-            teks yang beneran.
-          </p>
         </article>
 
         <article class="post">
@@ -32,13 +32,18 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
             Artikel Unit Testing, Artikel GraphQL, Artikel React, Digabung Jadi Satu. Panjang Deh
             Ya.
           </h2>
+          <p class="excerpt">
+            Excerpt copywriting. Rada panjang, jadi keliatan lebih nyata kalau nanti diterapin di
+            teks yang beneran.
+          </p>
         </article>
 
         <article class="post">
           <h2 class="title">Artikel Case Study My Archery</h2>
           <p class="excerpt">Excerpt copywriting.</p>
         </article>
-      </div> -->
+      </div> */
+      }
     </main>
   </div>
 </PrimaryLayout>
@@ -57,13 +62,7 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
     max-width: 600px;
   }
 
-  .content > p + p {
-    margin-top: 0.675em;
-  }
-
-  .content > h1 {
-    font-weight: 400;
-    font-size: 2.75rem;
+  .post-list-intro {
     margin-bottom: 2.75rem;
   }
 
@@ -73,8 +72,8 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
 
   .post .title {
     font-weight: 400;
-    font-size: 1.75rem;
-    margin-bottom: 0.25em;
+    font-size: 1.5rem;
+    margin-bottom: 0.375em;
   }
 
   .post .excerpt {
