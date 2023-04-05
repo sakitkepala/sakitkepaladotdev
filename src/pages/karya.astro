@@ -1,0 +1,42 @@
+---
+import PrimaryLayout from "../layouts/PrimaryLayout.astro";
+---
+
+<PrimaryLayout
+  title="Karya-karya buatan Dika - sakitkepala.dev"
+  description="Karya-karya buatan Dika"
+>
+  <div class="content-layout">
+    <main class="content">
+      <h1>Karya</h1>
+      <p>Beberapa projek yang pernah saya kerjakan dan yang sedang saya kerjakan juga.</p>
+
+      <p>...</p>
+    </main>
+  </div>
+</PrimaryLayout>
+
+<style>
+  .content-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, var(--content-container-width)) minmax(0, 1fr);
+    margin-top: 20rem;
+    margin-bottom: 10rem;
+  }
+
+  .content-layout > *:nth-child(1) {
+    grid-column: 2;
+    grid-row: 1;
+    max-width: 600px;
+  }
+
+  .content > p + p {
+    margin-top: 0.675em;
+  }
+
+  .content > h1 {
+    font-weight: 400;
+    font-size: 2.75rem;
+    margin-bottom: 2.75rem;
+  }
+</style>
