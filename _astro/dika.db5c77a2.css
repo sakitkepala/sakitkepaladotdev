@@ -1,0 +1,1 @@
+.content-layout:where(.astro-2R6XPMNU){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,var(--content-container-width)) minmax(0,1fr);margin-top:20rem;margin-bottom:10rem}.content-layout:where(.astro-2R6XPMNU)>:where(.astro-2R6XPMNU):nth-child(1){grid-column:2;grid-row:1;max-width:600px}
