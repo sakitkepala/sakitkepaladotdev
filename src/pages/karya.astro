@@ -11,7 +11,9 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
       <h1>Karya</h1>
       <p>
         Projek-projek yang pernah saya kerjakan, atau yang lagi saya kerjakan juga. Ini beberapa
-        yang saya suka.
+        yang saya suka, atau bisa langsung ke <a href="https://github.com/sakitkepala"
+          >profil saya di Github</a
+        >.
       </p>
 
       <div class="work-item-list">
@@ -25,24 +27,27 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
             />
           </div>
           <div class="actions">
-            <span class="source-unavailable">sumber</span> / <a
-              href="https://myarchery.id"
-              target="_blank"
-              rel="noopener noreferrer">kunjungi</a
+            <span class="source-unavailable" title="Kode sumber confidental khusus untuk internal"
+              >sumber</span
+            > / <a href="https://myarchery.id" target="_blank" rel="noopener noreferrer">kunjungi</a
             >
           </div>
-          {
-            /* <div class="description">
+          <div class="description">
             <p>
-              Deskripsinya ini aplikasi buat itu. Soalnya gini. Jadi gitu sih ya kira-kira ngerti
-              kan ya.
+              Platform event-organizing untuk olahraga panahan. Memfasilitasi <em
+                >Event organizer</em
+              > dalam penyelenggaraan event kompetisi panahan yang mencakup serangkaian kegiatannya,
+              sehingga dapat digunakan di lapangan secara <em>live</em>: mulai dari mempersiapkan
+              peraturan pertandingan dan kategori yang dipertandingkan, pendaftaran peserta dan
+              pembayaran online, live score selama jalannya pertandingan, update peringkat klasemen
+              secara live, hingga mengelola sertifikat juara dan pelaporan informasi selama
+              berlangsungnya event.
             </p>
-          </div> */
-          }
+          </div>
         </div>
 
         <div class="work-item">
-          <h2 class="title">App <i>iniresume.</i> ✨</h2>
+          <h2 class="title"><em>iniresume.</em> ✨</h2>
           <div class="thumbnail">
             <img
               class="image"
@@ -60,14 +65,43 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
               >kunjungi</a
             >
           </div>
-          {
-            /* <div class="description">
+          <div class="description">
             <p>
-              Deskripsinya ini aplikasi buat itu. Soalnya gini. Jadi gitu sih ya kira-kira ngerti
-              kan ya.
+              Web site <em>tool</em> simpel yang membantu untuk membuat dan menggenerate resume selembar
+              halaman dalam bentuk file PDF yang <em>ATS-friendly</em>. Berguna untuk developer yang
+              butuh resume untuk melamar pekerjaan baru.
             </p>
-          </div> */
-          }
+          </div>
+        </div>
+
+        <div class="work-item">
+          <h2 class="title">Note App yang Terinspirasi dari Zettelkasten</h2>
+          <div class="thumbnail">
+            <img
+              class="image"
+              src="/karya-noteapp.png"
+              alt="Screenshot karya projek Noteapp Zettelkasten"
+            />
+          </div>
+          <div class="actions">
+            <a
+              href="https://github.com/sakitkepala/sakitkepalanoteapp"
+              target="_blank"
+              rel="noopener noreferrer">sumber</a
+            > / <span
+              class="source-unavailable"
+              title="Belum ada aplikasi live yang bisa dikunjungi">kunjungi</span
+            >
+          </div>
+          <div class="description">
+            <p>
+              <em>Proof of concept</em> untuk aplikasi penulisan catatan berkonsep <a
+                href="https://en.wikipedia.org/wiki/Zettelkasten">Zettelkasten</a
+              >. Sekaligus dibuat sebagai projek model untuk meriset beberapa teknologi sekaligus,
+              seperti Nx Workspace, GraphQL API dan GraphQL client, Fastify, Vanilla Extract CSS,
+              React Native, Framer Motion, dan lainnya.
+            </p>
+          </div>
         </div>
       </div>
     </main>
