@@ -59,7 +59,7 @@ const { title, description } = Astro.props;
   }
 
   :root {
-    --content-container-width: 720px;
+    --content-container-width: 80vw;
   }
 
   .layout-grid {
@@ -68,25 +68,53 @@ const { title, description } = Astro.props;
     overflow-x: hidden;
   }
 
-  .header {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, var(--content-container-width)) minmax(0, 1fr);
-  }
-
   .header > *:nth-child(1) {
-    grid-column: 2;
-    grid-row: 1;
     max-width: var(--content-container-width);
   }
 
   .header > *:nth-child(2) {
-    grid-column: 2 / 4;
-    grid-row: 1;
-    justify-self: end;
+    max-width: var(--content-container-width);
+    margin-inline: auto;
   }
 
   .logo {
-    margin-block: 1rem;
     font-size: 2.5rem;
+    max-width: var(--content-container-width);
+    margin-block: 5rem 2rem;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 425px) {
+    .logo {
+      margin-block: 1rem;
+      text-align: right;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, var(--content-container-width)) minmax(0, 1fr);
+    }
+
+    .header > *:nth-child(1) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .header > *:nth-child(2) {
+      max-width: none;
+      margin-inline: 0;
+      grid-column: 2 / 4;
+      grid-row: 1;
+      justify-self: end;
+    }
+
+    .logo {
+      max-width: none;
+      margin-inline: 0;
+      text-align: left;
+    }
   }
 </style>
