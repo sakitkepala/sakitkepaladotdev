@@ -7,104 +7,93 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
   description="Karya-karya buatan Dika"
 >
   <div class="content-layout">
-    <main class="article-content">
+    <div class="article-content">
       <h1>Karya</h1>
+      <p>Projek-projek yang saya kerjakan. Ini beberapa&ast; yang saya suka.</p>
+
       <p>
-        Projek-projek yang pernah saya kerjakan, atau yang lagi saya kerjakan juga. Ini beberapa
-        yang saya suka, atau bisa langsung ke <a href="https://github.com/sakitkepala"
-          >profil saya di Github</a
-        >.
+        <span>
+          &ast;langsung cek <a href="https://github.com/sakitkepala">profil Github saya</a> juga bisa
+        </span>
       </p>
 
-      <div class="work-item-list">
-        <div class="work-item">
-          <h2 class="title">My Archery</h2>
-          <div class="thumbnail">
-            <img
-              class="image"
-              src="/karya-myarchery.png"
-              alt="Screenshot karya projek My Archery"
-            />
-          </div>
-          <div class="actions">
-            <span class="source-unavailable" title="Kode sumber confidental khusus untuk internal"
-              >sumber</span
-            > / <a href="https://myarchery.id" target="_blank" rel="noopener noreferrer">kunjungi</a
-            >
-          </div>
-          <div class="description">
-            <p>
-              Platform event-organizing untuk olahraga panahan. Memfasilitasi <em
-                >Event organizer</em
-              > dalam penyelenggaraan event kompetisi panahan yang mencakup serangkaian kegiatannya,
-              sehingga dapat digunakan di lapangan secara <em>live</em>: mulai dari mempersiapkan
-              peraturan pertandingan dan kategori yang dipertandingkan, pendaftaran peserta dan
-              pembayaran online, live score selama jalannya pertandingan, update peringkat klasemen
-              secara live, hingga mengelola sertifikat juara dan pelaporan informasi selama
-              berlangsungnya event.
-            </p>
-          </div>
-        </div>
+      <div class="arrow-down">&darr;</div>
+    </div>
+  </div>
 
-        <div class="work-item">
-          <h2 class="title"><em>iniresume.</em> ✨</h2>
-          <div class="thumbnail">
-            <img
-              class="image"
-              src="/karya-iniresume.png"
-              alt="Screenshot karya projek iniresume."
-            />
-          </div>
-          <div class="actions">
-            <a
-              href="https://github.com/sakitkepala/iniresume"
-              target="_blank"
-              rel="noopener noreferrer">sumber</a
-            > /
-            <a href="https://iniresume.sakitkepala.dev" target="_blank" rel="noopener noreferrer"
-              >kunjungi</a
-            >
-          </div>
-          <div class="description">
-            <p>
-              Web site <em>tool</em> simpel yang membantu untuk membuat dan menggenerate resume selembar
-              halaman dalam bentuk file PDF yang <em>ATS-friendly</em>. Berguna untuk developer yang
-              butuh resume untuk melamar pekerjaan baru.
-            </p>
-          </div>
-        </div>
-
-        <div class="work-item">
-          <h2 class="title">Note App yang Terinspirasi dari Zettelkasten</h2>
-          <div class="thumbnail">
-            <img
-              class="image"
-              src="/karya-noteapp.png"
-              alt="Screenshot karya projek Noteapp Zettelkasten"
-            />
-          </div>
-          <div class="actions">
-            <a
-              href="https://github.com/sakitkepala/sakitkepalanoteapp"
-              target="_blank"
-              rel="noopener noreferrer">sumber</a
-            > / <span
-              class="source-unavailable"
-              title="Belum ada aplikasi live yang bisa dikunjungi">kunjungi</span
-            >
-          </div>
-          <div class="description">
-            <p>
-              <em>Proof of concept</em> untuk aplikasi penulisan catatan berkonsep <a
-                href="https://en.wikipedia.org/wiki/Zettelkasten">Zettelkasten</a
-              >. Sekaligus dibuat sebagai projek model untuk meriset beberapa teknologi sekaligus,
-              seperti Nx Workspace, GraphQL API dan GraphQL client, Fastify, Vanilla Extract CSS,
-              React Native, Framer Motion, dan lainnya.
-            </p>
-          </div>
-        </div>
+  <div class="work-item-list">
+    <div class="work-item">
+      <h2 class="title">My Archery</h2>
+      <div class="thumbnail">
+        <img class="image" src="/karya-myarchery.png" alt="Screenshot karya projek My Archery" />
       </div>
-    </main>
+      <div class="actions">
+        <span class="source-unavailable" title="Kode sumber confidental khusus untuk internal"
+          >sumber</span
+        > / <a href="https://myarchery.id" target="_blank" rel="noopener noreferrer">kunjungi</a>
+      </div>
+      <div class="description">
+        <p>
+          Platform event-organizing untuk olahraga panahan. Memfasilitasi <em>Event organizer</em>
+          dalam penyelenggaraan event kompetisi panahan yang mencakup serangkaian kegiatannya, sehingga
+          dapat digunakan di lapangan secara <em>live</em>: mulai dari mempersiapkan peraturan
+          pertandingan dan kategori yang dipertandingkan, pendaftaran peserta dan pembayaran online,
+          live score selama jalannya pertandingan, update peringkat klasemen secara live, hingga
+          mengelola sertifikat juara dan pelaporan informasi selama berlangsungnya event.
+        </p>
+      </div>
+    </div>
+
+    <div class="work-item">
+      <h2 class="title"><em>iniresume.</em> ✨</h2>
+      <div class="thumbnail">
+        <img class="image" src="/karya-iniresume.png" alt="Screenshot karya projek iniresume." />
+      </div>
+      <div class="actions">
+        <a href="https://github.com/sakitkepala/iniresume" target="_blank" rel="noopener noreferrer"
+          >sumber</a
+        > /
+        <a href="https://iniresume.sakitkepala.dev" target="_blank" rel="noopener noreferrer"
+          >kunjungi</a
+        >
+      </div>
+      <div class="description">
+        <p>
+          Web site <em>tool</em> simpel yang membantu untuk membuat dan menggenerate resume selembar
+          halaman dalam bentuk file PDF yang <em>ATS-friendly</em>. Berguna untuk developer yang
+          butuh resume untuk melamar pekerjaan baru.
+        </p>
+      </div>
+    </div>
+
+    <div class="work-item">
+      <h2 class="title">Note App yang Terinspirasi oleh Zettelkasten</h2>
+      <div class="thumbnail">
+        <img
+          class="image"
+          src="/karya-noteapp.png"
+          alt="Screenshot karya projek Noteapp Zettelkasten"
+        />
+      </div>
+      <div class="actions">
+        <a
+          href="https://github.com/sakitkepala/sakitkepalanoteapp"
+          target="_blank"
+          rel="noopener noreferrer">sumber</a
+        > / <span class="source-unavailable" title="Belum ada aplikasi live yang bisa dikunjungi"
+          >kunjungi</span
+        >
+      </div>
+      <div class="description">
+        <p>
+          <em>Proof of concept</em> untuk aplikasi penulisan catatan yang mencoba mengadopsi konsep <a
+            href="https://en.wikipedia.org/wiki/Zettelkasten">Zettelkasten</a
+          >. Sekaligus dibuat sebagai projek model untuk meriset beberapa teknologi sekaligus,
+          seperti Nx Workspace, GraphQL API dan GraphQL client, Fastify, Vanilla Extract CSS, React
+          Native, Framer Motion, dan lainnya.
+        </p>
+      </div>
+    </div>
   </div>
 </PrimaryLayout>
 
@@ -112,8 +101,7 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
   .content-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, var(--content-container-width)) minmax(0, 1fr);
-    margin-top: 20rem;
-    margin-bottom: 16rem;
+    margin-top: 30vh;
   }
 
   .content-layout > *:nth-child(1) {
@@ -122,24 +110,44 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
     max-width: 600px;
   }
 
-  .work-item-list {
-    margin-top: 6rem;
+  .ps {
+    font-size: 0.625em;
   }
 
-  .work-item-list > .work-item + .work-item {
+  .arrow-down {
+    margin-top: 0.5em;
+    text-align: center;
+    font-size: 4rem;
+  }
+
+  .work-item-list {
     margin-top: 6rem;
+    margin-bottom: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7.5rem;
+  }
+
+  .work-item-list .work-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .work-item .title {
     margin-inline: -5rem;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 400;
     text-align: center;
     margin-bottom: 0.375em;
   }
 
   .work-item .thumbnail {
-    border: 1px solid rgb(220, 220, 230);
+    border: 2px solid rgb(0, 0, 0);
+    max-width: 800px;
+    line-height: 0;
+    margin-inline: auto;
   }
 
   .work-item .image {
@@ -158,6 +166,9 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
   }
 
   .work-item-list .description {
-    margin-top: 0.875em;
+    margin-top: 1.75rem;
+    max-width: 600px;
+    font-size: 15px;
+    line-height: 1.625rem;
   }
 </style>
