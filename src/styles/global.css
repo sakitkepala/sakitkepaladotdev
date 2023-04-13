@@ -19,6 +19,16 @@ a:active {
   color: rgb(238, 0, 0);
 }
 
+a {
+  text-underline-offset: 0.175em;
+}
+
+a:hover {
+  text-underline-offset: 0.1em;
+  text-decoration-style: dotted;
+  transition: text-underline-offset 0.05s ease-in;
+}
+
 .article-content p + p {
   margin-top: 0.875em;
 }
