@@ -4,10 +4,7 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<PrimaryLayout
-  title="Tentang Dika pembuat web site ini - sakitkepala.dev"
-  description="Tentang Dika pembuat web site ini"
->
+<PrimaryLayout title="Tentang Dika" description="Tentang Dika">
   <div class="content-layout">
     <main class="article-content">
       <h1>{frontmatter.title}</h1>
