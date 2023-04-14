@@ -1,4 +1,6 @@
 ---
+import IconCircle from "./IconCircle.astro";
+
 const isHome = Astro.url.pathname === "/";
 
 const checkCurrentPage = (path: string) => {
@@ -30,7 +32,9 @@ const checkCurrentPage = (path: string) => {
           </svg>
           <span>depan</span>
         </a>
-        <span class="separator">/</span>
+        <span class="separator">
+          <IconCircle />
+        </span>
       </>
     )
   }
@@ -39,13 +43,13 @@ const checkCurrentPage = (path: string) => {
     class:list={["nav-link", { "current-page": checkCurrentPage("/dika") }]}
     title="Ke halaman tentang Dika">dika</a
   >
-  <span class="separator">/</span>
+  <span class="separator"><IconCircle /></span>
   <a
     href="/tulisan"
     class:list={["nav-link", { "current-page": checkCurrentPage("/tulisan") }]}
     title="Ke halaman tulisan blog">tulisan</a
   >
-  <span class="separator">/</span>
+  <span class="separator"><IconCircle /></span>
   <a
     href="/karya"
     class:list={["nav-link", { "current-page": checkCurrentPage("/karya") }]}
