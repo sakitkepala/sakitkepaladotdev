@@ -102,9 +102,13 @@ const checkCurrentPage = (path: string) => {
     text-decoration-style: double;
   }
 
+  .nav-link.home svg {
+    transition: transform 0.75s ease-in-out, color 0.625s ease-in-out;
+  }
+
   .nav-link.home:hover svg {
-    transform: translate(-0.35em, 0.15em);
-    transition: transform 0.15s ease-out;
+    color: rgb(85, 26, 139, 0);
+    transform: translate(-36vw, 0.15em);
   }
 
   .nav-link svg {
