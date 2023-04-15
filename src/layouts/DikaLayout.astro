@@ -17,12 +17,24 @@ const { frontmatter } = Astro.props;
   .content-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, var(--content-container-width)) minmax(0, 1fr);
-    margin-top: 30vh;
+    margin-top: 8rem;
     margin-bottom: 10rem;
   }
 
   .content-layout > *:nth-child(1) {
     grid-column: 2;
     grid-row: 1;
+  }
+
+  @media screen and (min-width: 425px) {
+    .content-layout {
+      margin-top: 20vh;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .content-layout {
+      margin-top: 30vh;
+    }
   }
 </style>

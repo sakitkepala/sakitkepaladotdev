@@ -35,7 +35,7 @@ const { title, description } = Astro.props;
         <div class="logo-wrapper">
           <span class="logo">sakitkepala<span><IconCircle /></span>dev</span>
         </div>
-        <div>
+        <div class="nav-wrapper">
           <NavLinks />
         </div>
       </header>
@@ -71,27 +71,28 @@ const { title, description } = Astro.props;
     overflow-x: hidden;
   }
 
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .header > *:nth-child(1) {
-    max-width: var(--content-container-width);
+    width: var(--content-container-width);
+    margin-inline: auto;
   }
 
   .header > *:nth-child(2) {
-    max-width: var(--content-container-width);
+    width: var(--content-container-width);
     margin-inline: auto;
   }
 
   .logo-wrapper {
-    margin-block: 5rem 2rem;
-    margin-inline: auto;
+    margin-block: 3rem;
+
+    display: flex;
     text-align: center;
     line-height: 0.625;
-  }
-
-  @media screen and (min-width: 425px) {
-    .logo-wrapper {
-      margin-block: 0;
-      text-align: right;
-    }
   }
 
   .logo {
@@ -103,6 +104,22 @@ const { title, description } = Astro.props;
     letter-spacing: -0.05em;
   }
 
+  .nav-wrapper {
+    display: flex;
+  }
+
+  @media screen and (min-width: 425px) {
+    .logo-wrapper {
+      justify-content: flex-end;
+      margin-block: 1rem;
+      text-align: right;
+    }
+
+    .nav-wrapper {
+      justify-content: flex-end;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     .header {
       display: grid;
@@ -110,22 +127,31 @@ const { title, description } = Astro.props;
     }
 
     .header > *:nth-child(1) {
+      width: auto;
+      margin-inline: 0;
+
       grid-column: 2;
       grid-row: 1;
     }
 
     .header > *:nth-child(2) {
-      max-width: none;
+      width: auto;
       margin-inline: 0;
+
       grid-column: 2 / 4;
       grid-row: 1;
+      align-self: start;
       justify-self: end;
     }
 
     .logo-wrapper {
-      max-width: none;
-      margin-inline: 0;
+      justify-content: flex-start;
+      margin-block: 0.5rem;
       text-align: left;
+    }
+
+    .nav-wrapper {
+      margin-block: 0.5rem;
     }
   }
 </style>
