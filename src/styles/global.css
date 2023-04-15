@@ -37,15 +37,27 @@ a:hover {
   font-size: clamp(1rem, 1rem + 4vw, 3rem);
 }
 
+.article-content h1 {
+  font-weight: 400;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 425px) {
+  .article-content h1 {
+    margin-bottom: 2rem;
+  }
+}
+
 @media screen and (min-width: 512px) {
   .article-content p {
     font-size: 3rem;
   }
 }
 
-.article-content h1 {
-  font-weight: 400;
-  font-size: 1.75rem;
-  text-transform: uppercase;
-  margin-bottom: 5rem;
+@media screen and (min-width: 768px) {
+  .article-content h1 {
+    margin-bottom: 5rem;
+  }
 }

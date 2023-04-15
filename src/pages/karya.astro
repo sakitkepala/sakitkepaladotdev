@@ -214,7 +214,7 @@ import IconCircle from "../components/IconCircle.astro";
   .content-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, var(--content-container-width)) minmax(0, 1fr);
-    margin-top: 30vh;
+    margin-top: 8rem;
   }
 
   .content-layout > *:nth-child(1) {
@@ -246,12 +246,6 @@ import IconCircle from "../components/IconCircle.astro";
     row-gap: 3rem;
   }
 
-  @media screen and (min-width: 768px) {
-    .work-item-list .work-item {
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    }
-  }
-
   .work-item .thumbnails {
     display: flex;
     flex-direction: column;
@@ -260,17 +254,6 @@ import IconCircle from "../components/IconCircle.astro";
 
   .work-item .copywritings {
     margin-inline: 2rem;
-  }
-
-  @media screen and (min-width: 768px) {
-    .work-item .copywritings {
-      margin-inline: 3rem;
-    }
-  }
-  @media screen and (min-width: 1024px) {
-    .work-item .copywritings {
-      margin-inline: 6rem;
-    }
   }
 
   .work-item .title {
@@ -324,19 +307,41 @@ import IconCircle from "../components/IconCircle.astro";
     font-size: clamp(1rem, 1rem + 4vw, 2rem);
   }
 
+  .description p + p {
+    margin-top: 0.5em;
+  }
+
+  @media screen and (min-width: 425px) {
+    .content-layout {
+      margin-top: 20vh;
+    }
+  }
+
   @media screen and (min-width: 768px) {
+    .content-layout {
+      margin-top: 30vh;
+    }
+
+    .work-item-list .work-item {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    .work-item .copywritings {
+      margin-inline: 3rem;
+    }
+
     .work-item .description {
       font-size: clamp(0.875rem, 3vw, 2rem);
     }
   }
 
   @media screen and (min-width: 1024px) {
+    .work-item .copywritings {
+      margin-inline: 6rem;
+    }
+
     .work-item .description {
       font-size: 2rem;
     }
-  }
-
-  .description p + p {
-    margin-top: 0.5em;
   }
 </style>

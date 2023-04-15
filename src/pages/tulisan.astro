@@ -49,7 +49,7 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
   .content-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, var(--content-container-width)) minmax(0, 1fr);
-    margin-top: 30vh;
+    margin-top: 8rem;
     margin-bottom: 10rem;
   }
 
@@ -75,5 +75,17 @@ import PrimaryLayout from "../layouts/PrimaryLayout.astro";
 
   .post .excerpt {
     font-size: 1.125rem;
+  }
+
+  @media screen and (min-width: 425px) {
+    .content-layout {
+      margin-top: 20vh;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .content-layout {
+      margin-top: 30vh;
+    }
   }
 </style>
